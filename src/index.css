@@ -9,6 +9,13 @@
     --color-inactive: #ABB2BF;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #282C33;
+}
+
 .fira-code-default {
   font-family: "Fira Code", monospace;
   font-optical-sizing: auto;
