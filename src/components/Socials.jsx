@@ -14,7 +14,7 @@ function Socials() {
 
 
   return (
-    <section className="w-[3rem] h-[20rem] absolute">
+    <section className="w-[3rem] h-[20rem] absolute lg:flex md:flex hidden">
       <div className="h-full w-full flex flex-col items-center">
         <div className="bg-icondark w-[0.01rem] h-[7rem]" />
         <div>
