@@ -9,6 +9,7 @@ const router = createBrowserRouter([
     path:"/",
     Component: lazy(() => import('./Pages/Layout')),
     children: [
+      {index: true, Component: lazy(() => import('./Pages/Home'))},
       {path: "projects", Component: lazy(() => import('./Pages/Projects'))},
       {path: "meet-ivan", Component: lazy(() => import('./Pages/About'))},
       {path: "contact", Component: lazy(() => import('./Pages/Contact'))},

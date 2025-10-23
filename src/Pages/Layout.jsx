@@ -8,7 +8,7 @@ function Layout() {
     <section className='bg-bgdark w-full h-[100vh] text-lighttext'>
         <Socials />
         <Nav />
-        <section className=''>
+        <section className='w-full min-h-fit pl-[8rem] pb-[2rem]'>
             <Outlet />
         </section>
     </section>
