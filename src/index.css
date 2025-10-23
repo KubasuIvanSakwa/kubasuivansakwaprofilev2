@@ -9,16 +9,41 @@
     --color-inactive: #ABB2BF;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background:#9BA1AD;
+    border-radius: 10px;
+}
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: #282C33;
+    overflow-x: hidden;
 }
 
 .fira-code-default {
   font-family: "Fira Code", monospace;
   font-optical-sizing: auto;
   font-weight: 400;
+  font-style: normal;
+}
+
+.fira-code-bold {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+} 
+
+.fira-code-light {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
   font-style: normal;
 }

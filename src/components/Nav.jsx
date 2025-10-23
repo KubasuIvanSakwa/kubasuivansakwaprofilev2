@@ -27,8 +27,8 @@ function Nav() {
     ]
 
   return (
-    <nav className='lg:w-[80%] md:w-[80%] h-[5rem] relative lg:-right-30 md:-right-30 flex lg:justify-around md:justify-around justify-between p-4 items-center'>
-        <NavLink className="flex items-center">
+    <nav className='lg:w-[80%] md:w-[80%] h-[5rem] relative lg:-right-30 md:-right-30 flex lg:justify-between md:justify-between justify-between p-4 items-center'>
+        <NavLink className="flex items-center ">
             <img src={Logo} alt="" className='w-[0.9rem]'/>
             <p className='fira-code-default text-2xl'>Ivan</p>
         </NavLink>
