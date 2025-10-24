@@ -8,7 +8,7 @@ function Layout() {
     <section className='bg-bgdark w-full h-[100vh] text-lighttext overflow-x-hidden'>
         <Socials />
         <Nav />
-        <section className='w-full min-h-fit lg:pl-[8rem] md:pl-[8rem] pb-[2rem] pl-[1rem] pr-[1rem]'>
+        <section className='w-full min-h-fit lg:pl-[8rem] md:pl-[8rem] pb-[2rem] pl-[1rem] pr-[1rem] fira-code-default'>
             <Outlet />
         </section>
     </section>
