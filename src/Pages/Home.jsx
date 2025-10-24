@@ -4,13 +4,16 @@ import heroImage from '../assets/images/hero.png'
 import logoImage from '../assets/icons/logo.svg'
 import Dots from '../assets/icons/Dots.svg'
 import Quote from '../assets/icons/quote.svg'
+import Next from '../assets/icons/next.svg'
+import Hash from '../assets/icons/hash.svg'
 
 function Home() {
   return (
     <section className='relative'>
-      <section className='mt-[5rem] flex lg:flex-row md:flex-row flex-col'>
+      {/* Hero */}
+      <section className='lg:mt-[5rem] md:mt-[5rem] mt-[1rem] flex lg:flex-row md:flex-row flex-col'>
         <section className='lg:w-[40rem] md:w-[25rem]'>
-          <p className='text-3xl md:text-2xl fira-code-bold'>
+          <p className='lg:text-3xl md:text-2xl fira-code-bold text-2xl'>
             Kubasu Ivan is a <span className='text-darktext'>Mobile developer</span> and <span className='text-darktext'>Front-end Developer</span>.
           </p>
           <p className='fira-code-light lg:text-lg mt-3'>
@@ -32,6 +35,7 @@ function Home() {
         </section>
       </section>
 
+      {/* quote */}
       <section className='w-full flex items-center lg:mt-[5rem] mt-[5rem] relative flex-col '>
         <section className='border border-darktext lg:p-4 md:p-4 pt-3 pb-3 pl-[0.4rem] pr-[0.4rem] relative lg:w-[37.3rem] md:w-[30rem] w-fit mt-[1rem]'>
           <div className='bg-bgdark absolute left-[1.4rem] -top-[1rem]'>
@@ -50,6 +54,23 @@ function Home() {
           </section>
         </section>
       <div className='border border-darktext w-[10rem] h-[4rem] absolute -right-[8rem] -top-[4rem]'/>
+      </section>
+
+      {/* projects */}
+      <section className='relative w-full p-1 mt-[4rem] pr-[3rem] bg-red-500'>
+        <div className='flex items-center justify-between'>
+          <div className='flex items-center'>
+            <div className='flex items-center'>
+              <img src={Hash} alt="" className='w-[1rem] mt-[0.3rem]'/>
+              <p className='text-3xl fira-code-bold'>projects</p>
+            </div>
+            <hr className='w-[30rem] mt-[0.4rem] ml-[0.4rem] border-darktext'/>
+          </div>
+          <div className='flex items-center'>
+            <p>View All</p>
+            <img src={Next} alt="" className='w-[3rem] mb-[0.4rem]'/>
+          </div>
+        </div>
       </section>
 
     </section>
