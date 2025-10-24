@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import hash from '../assets/icons/hash.svg'
 import Logo from '../assets/icons/logo.svg'
 import Hum from '../assets/icons/hum.svg'
@@ -25,6 +25,7 @@ function Nav() {
         {id: 2, title: 'about-me', url: '/meet-ivan'},
         {id: 3, title: 'contact', url: '/contact'},
     ]
+
 
   return (
     <nav className='lg:w-[80%] md:w-[80%] h-[5rem] relative lg:-right-30 md:-right-30 flex lg:justify-between md:justify-between justify-between p-4 items-center'>
@@ -54,7 +55,7 @@ function Nav() {
             {dropToggle && <img src={Close} alt="" className='w-[2rem]'/>}
         </div>
         {dropToggle &&
-         <div className='lg:hidden md:hidden flex flex-col absolute h-[88vh] w-full top-[4.8rem] left-0 z-10 p-2 bg-bgdark'>
+         <div className='lg:hidden md:hidden flex flex-col absolute h-[88.9vh] z-[100] w-full top-[4.8rem] left-0 p-2 bg-bgdark'>
             <ul className='flex flex-col gap-[3rem] pt-[3rem]'>
             {links.map((item) => (
                 <li>
@@ -69,7 +70,7 @@ function Nav() {
                 </li>
             ))}
             </ul>
-            <div className='flex mt-[5rem] w-full items-center justify-center'>   
+            <div className='flex mt-[8rem] w-full items-center justify-center'>   
                 {socials.map((item) => (
                     <a href={item.url} key={item.id} className="flex justify-center items-center">
                         <img src={item.icon} alt={item.alt} className="w-[4rem] h-[4rem]" />
