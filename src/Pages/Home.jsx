@@ -6,6 +6,8 @@ import Dots from '../assets/icons/Dots.svg'
 import Quote from '../assets/icons/quote.svg'
 import Next from '../assets/icons/next.svg'
 import Hash from '../assets/icons/hash.svg'
+import Live from '../assets/icons/live.svg'
+import Play from '../assets/icons/play.svg'
 
 function Home() {
   return (
@@ -74,9 +76,32 @@ function Home() {
           </div>
         </div>
         {/* content */}
-        <section>
-            
+        <section className='mt-[2rem] flex gap-2'>
+            <div className='w-[20rem] h-fit border border-darktext'>
+              <img src='https://placehold.co/600x400/000000/FFF' />
+              <div className='flex flex-wrap gap-1 border-t border-b border-darktext p-1'>
+                <p className='fira-code-light opacity-75'>React</p>
+                <p className='fira-code-light opacity-75'>Nodejs</p>
+                <p className='fira-code-light opacity-75'>Tailwindcss</p>
+              </div>
+              <div className='p-2 '>
+                <h4 className='fira-code-bold text-xl'>ProjectX</h4>
+                <p className='fira-code-light mt-[0.5rem]'>Discord anti-crash bot</p>
+                <div className='flex gap-4 mt-[0.5rem] mb-[0.3rem]'>
+                  <div className='flex items-center overflow-hidden border border-darktext p-1 w-[6.5rem] h-[2.5rem] justify-around hover:bg-darktext/40 cursor-pointer'>
+                    <p className='fira-code-default'>Live</p>
+                    <img src={Live} alt="" className='w-[3rem] mb-[0.2rem]'/>
+                  </div>
+                  <div className='flex items-center border border-darktext p-1 w-[6.5rem] h-[2.5rem] justify-around hover:bg-darktext/40 cursor-pointer'>
+                    <p className='fira-code-default'>Demo</p>
+                    <img src={Play} alt="" className='w-[1rem]'/>
+                  </div>
+                </div>
+              </div>
+            </div>
         </section>
+
+        
       </section>
 
     </section>
