@@ -40,6 +40,50 @@ function Home() {
       github: "",
     },
   ];
+
+  const skillsData = {
+    languages: {
+      title: "Languages",
+      items: ["TypeScript", "Javascript", "Python"],
+    },
+    databases: {
+      title: "Databases",
+      items: ["SQLite", "PostgreSQL", "MongoDB"],
+    },
+    tools: {
+      title: "Tools",
+      items: ["VSCode", "Neovim", "Linux", "Figma", "Github", "Git"],
+    },
+    other: { title: "Other", items: ["HTML", "CSS", "PHP", "REST"] },
+    frameworks: {
+      title: "Frameworks",
+      items: [
+        "React",
+        "Flutter",
+        "Node.js",
+        "Tailwind",
+        "React-Native",
+        "Next.js",
+        "Laravel",
+      ],
+    },
+  };
+
+  const SkillBox = ({ title, items }) => (
+    <div className="border border-darktext w-full h-fit fira-code-default flex flex-col">
+      <div className="border-b border-darktext p-2">
+        <h3 className="font-bol fira-code-bold">{title}</h3>
+      </div>
+      <div className="flex flex-wrap gap-x-4 gap-y-1 p-2 fira-code-light">
+        {items.map((item) => (
+          <p key={item} className="opacity-80">
+            {item}
+          </p>
+        ))}
+      </div>
+    </div>
+  );
+
   return (
     <section className="relative">
       {/* Hero */}
@@ -113,7 +157,6 @@ function Home() {
         />
         {/* header */}
         <div className="flex w-full items-center justify-between gap-4">
-
           <div className="flex flex-1 items-center gap-4 overflow-hidden">
             <div className="flex flex-shrink-0 items-center">
               <img src={Hash} alt="" className="w-[1rem] mt-[0.3rem]" />
@@ -122,7 +165,6 @@ function Home() {
 
             <hr className="hidden lg:w-[40rem] md:w-[20rem] border-darktext sm:block" />
           </div>
-
 
           <div className="flex flex-shrink-0 items-center cursor-pointer">
             <p className="hidden sm:block">View All</p>
@@ -165,6 +207,75 @@ function Home() {
               </div>
             </div>
           ))}
+        </section>
+      </section>
+
+      {/* skills */}
+      <section className="mt-[4rem]">
+        {/* Header */}
+        <div className="flex w-full items-center justify-between gap-4">
+          <div className="flex flex-1 items-center gap-4 overflow-hidden">
+            <div className="flex flex-shrink-0 items-center">
+              <img src={Hash} alt="" className="w-[1rem] mt-[0.3rem]" />
+              <p className="text-3xl fira-code-bold">skills</p>
+            </div>
+
+            <hr className="hidden lg:w-[20rem] md:w-[20rem] border-darktext sm:block" />
+          </div>
+        </div>
+
+        <section className="flex flex-col lg:flex-row w-full p-4 lg:p-8 gap-16">
+          {/* Left Decorative Column */}
+          <div className="hidden md:flex gap-10 w-full md:w-full lg:w-2/5 mt-[3rem]">
+            <div className="flex flex-col items-center pt-8">
+              <img src={Dots} className="w-[6rem]" alt="Dots pattern" />
+              <img
+                src={logoImage}
+                className="w-[4rem] mt-12"
+                alt="Abstract logo"
+              />
+            </div>
+            <div className="w-full relative">
+              <div className="w-24 h-24 border border-darktext absolute lg:-right-4 md:right-13 -top-8" />
+              <img
+                src={Dots}
+                className="absolute lg:left-[8rem] right-[13rem] top-[8rem] w-16"
+                alt="Dots pattern"
+              />
+              <div className="w-16 h-16 border border-darktext absolute lg:-right-8 md:right-6 bottom-0" />
+            </div>
+          </div>
+
+          <div className="flex w-full flex-col gap-4 text-white md:flex-row lg:w-3/5">
+            <div className="flex w-full md:w-1/3">
+              <SkillBox
+                title={skillsData.languages.title}
+                items={skillsData.languages.items}
+              />
+            </div>
+
+            <div className="flex w-full flex-col gap-4 md:w-1/3">
+              <SkillBox
+                title={skillsData.databases.title}
+                items={skillsData.databases.items}
+              />
+              <SkillBox
+                title={skillsData.other.title}
+                items={skillsData.other.items}
+              />
+            </div>
+
+            <div className="flex w-full flex-col gap-4 md:w-1/3">
+              <SkillBox
+                title={skillsData.tools.title}
+                items={skillsData.tools.items}
+              />
+              <SkillBox
+                title={skillsData.frameworks.title}
+                items={skillsData.frameworks.items}
+              />
+            </div>
+          </div>
         </section>
       </section>
     </section>
