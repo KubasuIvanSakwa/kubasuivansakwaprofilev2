@@ -20,7 +20,7 @@ function Footer() {
 
   return (
     <section className="lg:pl-[8rem] md:pl-[8rem] pb-[2rem] pl-[1rem] pr-[1rem] border-t-[0.13rem] border-darktext pt-[2rem]">
-      <section className="flex justify-between pr-[4rem]">
+      <section className="flex justify-between lg:pr-[4rem] md:pr-[4rem] lg:flex-row md:flex-row flex-col gap-2">
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2">
             <NavLink className="flex items-center ">
@@ -55,7 +55,7 @@ function Footer() {
           </div>
         </div>
       </section>
-      <section className="flex justify-center items-center mt-[3rem] fira-code-light">
+      <section className="flex lg:justify-center md:justify-center items-center lg:mt-[3rem] md:mt-[3rem] mt-[1.4rem] fira-code-light">
         <p>&copy; Copyright 2025. Made By Kubasu Ivan Sakwa</p>
       </section>
     </section>
