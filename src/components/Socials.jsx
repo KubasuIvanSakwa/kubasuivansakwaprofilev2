@@ -14,10 +14,10 @@ function Socials() {
 
 
   return (
-    <section className="w-[3rem] h-[20rem] absolute lg:flex md:flex hidden">
+    <section className="w-[3rem] h-[20rem] absolute lg:flex md:flex hidden z-[100]">
       <div className="h-full w-full flex flex-col items-center">
         <div className="bg-icondark w-[0.01rem] h-[7rem]" />
-        <div>
+        <div className="backdrop-blur-[2px]">
             {socials.map((item) => (
             <a href={item.url} key={item.id} className="flex justify-center items-center">
                 <img src={item.icon} alt={item.alt} className="w-[2rem] h-[2rem]" />
