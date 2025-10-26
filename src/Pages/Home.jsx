@@ -57,7 +57,9 @@ function Home() {
       </section>
 
       {/* projects */}
-      <section className='relative w-full p-1 mt-[4rem] pr-[3rem] bg-red-500'>
+      <section className='relative w-full p-1 mt-[4rem] pr-[3rem]'>
+        <img src={Dots} alt="" className='grayscale absolute z-10 -left-[11rem] top-[5rem] w-[5rem]'/>
+        {/* header */}
         <div className='flex items-center justify-between'>
           <div className='flex items-center'>
             <div className='flex items-center'>
@@ -71,6 +73,10 @@ function Home() {
             <img src={Next} alt="" className='w-[3rem] mb-[0.4rem]'/>
           </div>
         </div>
+        {/* content */}
+        <section>
+            
+        </section>
       </section>
 
     </section>
