@@ -34,8 +34,8 @@ function Nav() {
             <p className='fira-code-default text-2xl'>Ivan</p>
         </NavLink>
         <ul className='lg:flex md:flex gap-3 hidden'>
-            {links.map((item) => (
-                <li>
+            {links.map((item, index) => (
+                <li key={index}>
                     <NavLink 
                         to={item.url} 
                         className={({isActive}) => isActive ? "flex gap-[0.01rem] items-center text-white" : "flex gap-[0.01rem] items-center text-inactive opacity-80"}
@@ -57,8 +57,8 @@ function Nav() {
         {dropToggle &&
          <div className='lg:hidden md:hidden flex flex-col absolute h-[88.9vh] z-[100] w-full top-[4.8rem] left-0 p-2 bg-bgdark'>
             <ul className='flex flex-col gap-[3rem] pt-[3rem]'>
-            {links.map((item) => (
-                <li>
+            {links.map((item, index) => (
+                <li key={index}>
                     <NavLink 
                         to={item.url} 
                         onClick={() => setDropToggle(prev => !prev)}
