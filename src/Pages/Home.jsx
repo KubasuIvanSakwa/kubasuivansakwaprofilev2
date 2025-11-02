@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
-import heroImage from "../assets/images/hero.png";
+import heroImage from "../assets/images/sitting.png";
+import StandingImage from "../assets/images/standing2.png";
 import logoImage from "../assets/icons/logo.svg";
 import Dots from "../assets/icons/Dots.svg";
 import Quote from "../assets/icons/quote.svg";
@@ -178,15 +179,15 @@ function Home() {
 
         {/* content */}
         <section className="mt-[2rem] grid grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] gap-4 justify-items-center">
-          {projects.map((item) => (
+          {projects.map((item, index) => (
             <div
-              key={item.title}
+              key={index}
               className="w-full h-fit border border-darktext"
             >
               <img src={item.image} className="w-full" />
               <div className="flex flex-wrap gap-1 border-t border-b border-darktext p-1">
-                {item.langs.map((lang) => (
-                  <p key={lang} className="fira-code-light opacity-75">
+                {item.langs.map((lang, index) => (
+                  <p key={index} className="fira-code-light opacity-75">
                     {lang}
                   </p>
                 ))}
@@ -275,6 +276,67 @@ function Home() {
                 items={skillsData.frameworks.items}
               />
             </div>
+          </div>
+        </section>
+      </section>
+
+      {/* About me Intro */}
+      <section>
+        {/* Header */}
+        <div className="flex w-full items-center justify-between gap-4 mt-3">
+          <div className="flex flex-1 items-center gap-4 overflow-hidden">
+            <div className="flex flex-shrink-0 items-center">
+              <img src={Hash} alt="" className="w-[1rem] mt-[0.3rem]" />
+              <p className="text-3xl fira-code-bold">about-me</p>
+            </div>
+            <hr className="hidden lg:w-[20rem] md:w-[20rem] border-darktext sm:block" />
+          </div>
+        </div>
+
+        <section className="mt-5">
+          <div className="flow-root fira-code-light text-lg">
+            
+            <section className="relative w-full md:w-1/3 lg:-mt-[3rem] md:float-right md:ml-6 mb-4 md:mb-0">
+              
+              <img 
+                src={StandingImage} 
+                alt="" 
+                className="grayscale w-full md:[shape-outside:var(--standing-image-url)] [shape-margin:_1rem]"
+                style={{ '--standing-image-url': `url(${StandingImage})` }}
+              />
+              <img
+                src={Dots}
+                alt=""
+                className="grayscale absolute z-10 left-[3rem] top-[2rem] w-[20%]"
+              />
+              <img
+                src={Dots}
+                alt=""
+                className="grayscale absolute z-10 right-[5rem] bottom-[1rem] w-[20%]"
+              />
+            </section>
+            
+            <div>
+              <h4 className="mb-3 opacity-85">Hello, I’m Kubasu!</h4>
+              <p className="mb-3 opacity-85">
+                I'm a software developer who builds things on a
+                deadline, often for fun. No, really, I willingly sign up for 24-hour
+                hackathons  which means I'm great at building entire apps while running on 0% sleep and 100% caffeine.
+              </p>
+              <p className="opacity-85">
+                My weapons of choice are <span className="text-darktext fira-code-bold">React</span>, <span className="text-darktext fira-code-bold">Tailwind CSS</span>, and <span className="text-darktext fira-code-bold">Firebase</span>, and I use
+                them to build responsive websites that look good on any screen (even
+                that weird one your uncle still has). When I'm not coding for glory
+                (or a free t-shirt), I'm brainstorming the next big thing, like a
+                dating app for Kenya that actually works. I’m always looking for the
+                next challenge to tackle.
+              </p>
+            </div>
+            <div className="flex items-center overflow-hidden border mt-5 border-darktext gap-2 p-1 w-fit h-[2.5rem] justify-around hover:bg-darktext/40 cursor-pointer">
+              <p className="fira-code-default">Read More</p>
+              <img src={Next} alt="" className="w-[3rem] mb-[0.2rem]" />
+            </div>
+
           </div>
         </section>
       </section>
