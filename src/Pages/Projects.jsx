@@ -34,12 +34,12 @@ function Projects() {
     <section className="mt-10">
       {/* main Header */}
       <div className="flex w-full items-center justify-between gap-4">
-        <div className="flex flex-col items-center overflow-hidden">
-          <div className="flex flex-shrink-0 gap-[1px] items-center">
-            <img src={Slash} alt="" className="w-[1.2rem] mb-[0.5rem]" />
-            <p className="text-4xl fira-code-bold">Projects</p>
+        <div className="flex flex-col items-center overflow-hidden justify-start">
+          <div className="flex flex-shrink-0 gap-[1px] items-center ">
+            <img src={Slash} alt="" className="w-[1.2rem]" />
+            <p className="text-4xl fira-code-bold">projects</p>
           </div>
-          <p className="fira-code-light">List of my projects</p>
+          <p className="fira-code-light mt-2 ">List of my projects</p>
         </div>
       </div>
 
