@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router";
+import { NavLink } from "react-router";
 import heroImage from "../assets/images/sitting.png";
 import StandingImage from "../assets/images/standing2.png";
 import logoImage from "../assets/icons/logo.svg";
@@ -168,14 +168,14 @@ function Home() {
             <hr className="hidden lg:w-[40rem] md:w-[20rem] border-darktext sm:block" />
           </div>
 
-          <div className="flex flex-shrink-0 items-center cursor-pointer">
+          <NavLink to='projects' className="flex flex-shrink-0 items-center cursor-pointer">
             <p className="hidden sm:block">View All</p>
             <img
               src={Next}
               alt="View all projects"
               className="w-[3rem] mb-[0.4rem]"
             />
-          </div>
+          </NavLink>
         </div>
 
         {/* --- CONTENT SECTION --- */}
@@ -195,7 +195,7 @@ function Home() {
 
           {/* projects */}
           {projects &&
-            projects.map((item) => (
+            projects.slice(0, 3).map((item) => (
               <div
                 key={item.Title} 
                 className="w-full h-fit border border-darktext"
