@@ -83,7 +83,7 @@ function Home() {
     </div>
   );
 
-  // Use <a> tag instead of <Link>
+
   const Link = ({ children, ...props }) => <a {...props}>{children}</a>;
 
   return (
@@ -186,7 +186,7 @@ function Home() {
               <ProjectSkeletonCard key={index} />
             ))}
 
-          {/* Show error message IN the grid */}
+          {/* error */}
           {error && (
             <div className="col-span-full text-center fira-code-bold text-lg text-red-500">
               Error: {error.message}
@@ -197,7 +197,7 @@ function Home() {
           {projects &&
             projects.map((item) => (
               <div
-                key={item.Title} // Use a unique key
+                key={item.Title} 
                 className="w-full h-fit border border-darktext"
               >
                 <img
