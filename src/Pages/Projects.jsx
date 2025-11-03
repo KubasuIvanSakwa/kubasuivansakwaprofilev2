@@ -39,7 +39,7 @@ function Projects() {
             <img src={Slash} alt="" className="w-[1.2rem] mb-[0.5rem]" />
             <p className="text-4xl fira-code-bold">Projects</p>
           </div>
-          <p>List of my projects</p>
+          <p className="fira-code-light">List of my projects</p>
         </div>
       </div>
 
