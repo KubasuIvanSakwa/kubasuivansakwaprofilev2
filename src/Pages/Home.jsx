@@ -323,7 +323,6 @@ function Home() {
               <SkillBox
                 title={skillsData.frameworks.title}
                 items={skillsData.frameworks.items}
-                E
               />
             </div>
           </div>
