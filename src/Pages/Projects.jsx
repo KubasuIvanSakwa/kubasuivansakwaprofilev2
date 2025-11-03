@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-import Live from "../assets/Icons/live.svg";
-import Slash from "../assets/Icons/slash.svg";
-import Hash from "../assets/Icons/hash.svg";
+import Live from "../assets/icons/live.svg";
+import Slash from "../assets/icons/slash.svg";
+import Hash from "../assets/icons/hash.svg";
 import useFetch from "../../api/useFetch";
 import { fetchProjects } from "../../api/api";
 import github from "../assets/icons/Github.svg";
