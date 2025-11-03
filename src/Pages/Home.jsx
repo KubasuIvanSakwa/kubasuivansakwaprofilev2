@@ -386,10 +386,10 @@ function Home() {
                 I’m always looking for the next challenge to tackle.
               </p>
             </div>
-            <div className="flex items-center overflow-hidden border mt-5 border-darktext gap-2 p-1 w-fit h-[2.5rem] justify-around hover:bg-darktext/40 cursor-pointer">
+            <NavLink to="/meet-ivan" className="flex items-center overflow-hidden border mt-5 border-darktext gap-2 p-1 w-fit h-[2.5rem] justify-around hover:bg-darktext/40 cursor-pointer">
               <p className="fira-code-default">Read More</p>
               <img src={Next} alt="" className="w-[3rem] mb-[0.2rem]" />
-            </div>
+            </NavLink>
           </div>
         </section>
       </section>
