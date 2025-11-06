@@ -9,9 +9,7 @@ import Github from "../assets/icons/Github.svg";
 import Linkedin from "../assets/icons/Linkedin.svg";
 import { NavLink } from 'react-router'
 
-function Nav() {
-
-    const [dropToggle, setDropToggle] = useState(false)
+function Nav({ handleToggle, dropToggle }) {
 
      const socials = [
         {id: 3, icon: Figma, url: 'https://github.com/KubasuIvanSakwa', alt: ''},
@@ -49,7 +47,7 @@ function Nav() {
 
         <div
             className='lg:hidden md:hidden flex'
-            onClick={() => setDropToggle(prev => !prev)}
+            onClick={() => handleToggle()}
         >
             {!dropToggle && <img src={Hum} alt="" className='w-[2rem]'/>}
             {dropToggle && <img src={Close} alt="" className='w-[2rem]'/>}
