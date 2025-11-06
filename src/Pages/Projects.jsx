@@ -9,9 +9,11 @@ import Dots from "../assets/icons/Dots.svg";
 
 
 function Projects() {
-  const ProjectSkeletonCard = () => (
+  const ProjectSkeletonCard = ({ projecttype }) => (
     <div className="w-full h-fit border border-gray-700 animate-pulse break-inside-avoid mb-4">
-      <div className="w-full h-48 bg-gray-700"></div>
+      {projecttype === "complete" &&
+        <div className="w-full h-48 bg-gray-700"></div>
+      }
       <div className="p-1 border-t border-b border-gray-700">
         <div className="h-4 bg-gray-700 rounded w-3/4"></div>
       </div>
@@ -58,7 +60,7 @@ function Projects() {
 
         {/* loader */}
         {loading &&
-          [...Array(3)].map((_, index) => <ProjectSkeletonCard key={index} />)}
+          [...Array(3)].map((_, index) => <ProjectSkeletonCard key={index} projecttype="complete" />)}
 
         {/* error */}
         {error && (
@@ -149,7 +151,7 @@ function Projects() {
       <section className="mt-[2rem] columns-1 md:columns-2 lg:columns-3 gap-4">
         {/* loader */}
         {loading &&
-          [...Array(3)].map((_, index) => <ProjectSkeletonCard key={index} />)}
+          [...Array(3)].map((_, index) => <ProjectSkeletonCard key={index} projecttype="small" />)}
 
         {/* error */}
         {error && (
