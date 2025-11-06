@@ -7,16 +7,12 @@ import Logo from "../assets/icons/logo.svg";
 
 function Footer() {
   const socials = [
-    { id: 3, icon: Figma, url: "https://github.com/KubasuIvanSakwa", alt: "" },
-    { id: 1, icon: Github, url: "https://github.com/KubasuIvanSakwa", alt: "" },
-    {
-      id: 2,
-      icon: Linkedin,
-      url: "https://github.com/KubasuIvanSakwa",
-      alt: "",
-    },
-    // {id: 4, icon: CV, url: 'https://github.com/KubasuIvanSakwa', alt: ''},
-  ];
+      {id: 3, icon: Figma, url: 'https://www.figma.com/@kubasuivan', alt: ''},
+      {id: 1, icon: Github, url: 'https://github.com/KubasuIvanSakwa', alt: ''},
+      {id: 2, icon: Linkedin, url: 'https://www.linkedin.com/in/kubasuivansakwa/', alt: ''},
+      // {id: 4, icon: CV, url: 'https://github.com/KubasuIvanSakwa', alt: ''},
+    ]
+  
 
   return (
     <section className="lg:pl-[8rem] md:pl-[8rem] pb-[2rem] pl-[1rem] pr-[1rem] border-t-[0.13rem] border-darktext pt-[2rem]">
@@ -44,6 +40,7 @@ function Footer() {
                 href={item.url}
                 key={item.id}
                 className="flex justify-center items-center"
+                target="_blank"
               >
                 <img
                   src={item.icon}

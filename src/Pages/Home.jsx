@@ -101,9 +101,9 @@ function Home() {
             where technology meets creativity.
           </p>
 
-          <Link className="border border-darktext w-[10rem] p-1 flex justify-center items-center mt-5">
+          <NavLink to="/contact" className="border z-10 border-darktext w-[10rem] hover:bg-darktext/40 p-1 flex justify-center items-center mt-5">
             <p className="fira-code-light text-lg">Contact Me !!</p>
-          </Link>
+          </NavLink>
         </section>
         <section className="lg:-mt-[3rem] md:-mt-[3rem] mt-[1.4rem] w-auto flex flex-col justify-center items-center relative z-20">
           <img src={heroImage} alt="" className="grayscale w-[70%]" />
