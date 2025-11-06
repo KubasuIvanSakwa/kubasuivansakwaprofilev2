@@ -59,7 +59,7 @@ function Nav({ handleToggle, dropToggle }) {
                 <li key={index}>
                     <NavLink 
                         to={item.url} 
-                        onClick={() => setDropToggle(prev => !prev)}
+                        onClick={() => handleToggle()}
                         className={({isActive}) => isActive ? "flex gap-[0.01rem] items-center text-white" : "flex gap-[0.01rem] items-center text-inactive opacity-80"}
                     >
                         <img src={hash} alt="" className='w-[1.5rem]'/>
