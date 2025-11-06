@@ -6,9 +6,9 @@ import Linkedin from "../assets/icons/Linkedin.svg";
 
 function Socials() {
   const socials = [
-    {id: 3, icon: Figma, url: 'https://github.com/KubasuIvanSakwa', alt: ''},
+    {id: 3, icon: Figma, url: 'https://www.figma.com/@kubasuivan', alt: ''},
     {id: 1, icon: Github, url: 'https://github.com/KubasuIvanSakwa', alt: ''},
-    {id: 2, icon: Linkedin, url: 'https://github.com/KubasuIvanSakwa', alt: ''},
+    {id: 2, icon: Linkedin, url: 'https://www.linkedin.com/in/kubasuivansakwa/', alt: ''},
     // {id: 4, icon: CV, url: 'https://github.com/KubasuIvanSakwa', alt: ''},
   ]
 
@@ -19,7 +19,7 @@ function Socials() {
         <div className="bg-icondark w-[0.01rem] h-[7rem]" />
         <div className="backdrop-blur-[2px]">
             {socials.map((item) => (
-            <a href={item.url} key={item.id} className="flex justify-center items-center">
+            <a href={item.url} key={item.id} target="_blank" className="flex justify-center items-center">
                 <img src={item.icon} alt={item.alt} className="w-[2rem] h-[2rem]" />
             </a>
             ))}
