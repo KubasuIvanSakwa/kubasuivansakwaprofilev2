@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter } from 'react-router'
 import { RouterProvider } from 'react-router/dom'
 import Loading from './components/Loading'
-import { Analytics } from "@vercel/analytics/next" 
+import { Analytics } from "@vercel/analytics/react" 
 
 
 function App() {
