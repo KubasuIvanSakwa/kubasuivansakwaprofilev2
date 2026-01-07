@@ -15,6 +15,8 @@ function App() {
         {index: true, Component: lazy(() => import('./Pages/Home'))},
         {path: "projects", Component: lazy(() => import('./Pages/Projects'))},
         {path: "meet-ivan", Component: lazy(() => import('./Pages/About'))},
+        {path: "blog", Component: lazy(() => import('./Pages/Blog'))},
+        {path: "blog/:id", Component: lazy(() => import('./Pages/BlogReadPage'))},
         {path: "contact", Component: lazy(() => import('./Pages/Contact'))},
         {path: "*", Component: lazy(() => import('./Pages/NotFound'))},
       ],

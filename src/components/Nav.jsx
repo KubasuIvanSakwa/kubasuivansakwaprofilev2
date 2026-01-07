@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import hash from '../assets/icons/hash.svg'
 import Logo from '../assets/icons/logo.svg'
 import Hum from '../assets/icons/hum.svg'
@@ -21,6 +21,7 @@ function Nav({ handleToggle, dropToggle }) {
         {id: 0, title: 'home', url: '/'},
         {id: 1, title: 'works', url: '/projects'},
         {id: 2, title: 'about-me', url: '/meet-ivan'},
+        {id: 2, title: 'blog', url: '/blog'},
         {id: 3, title: 'contact', url: '/contact'},
     ]
 
@@ -68,7 +69,7 @@ function Nav({ handleToggle, dropToggle }) {
                 </li>
             ))}
             </ul>
-            <div className='flex mt-[8rem] w-full items-center justify-center'>   
+            <div className='flex mt-[3.5rem] w-full items-center justify-center'>   
                 {socials.map((item) => (
                     <a href={item.url} key={item.id} className="flex justify-center items-center">
                         <img src={item.icon} alt={item.alt} className="w-[4rem] h-[4rem]" />
